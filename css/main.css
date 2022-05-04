@@ -19,7 +19,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: hidden;
-  background: linear-gradient(90deg, #282b31 calc(100% - 0.5px), #3a3a45 0);
+  background: linear-gradient(90deg, #282b31 calc(100% - 0.5px), #2e3138 0);
   background-size: calc((100% - 5 * 0.5px) / 7 + 0.5px) 100%; }
 
 body::-webkit-scrollbar {
@@ -310,7 +310,7 @@ h5 {
       width: 20rem;
       height: 20rem;
       background: #2a2d33;
-      border: 1px dashed #3a3a45;
+      border: 1px dashed #2e3138;
       border-radius: 8px;
       display: flex;
       justify-content: center;
