@@ -1,0 +1,28 @@
+{
+  "name": "onther.digital",
+  "version": "1.0.0",
+  "description": "Website assets for Onther Digital",
+  "main": "index.js",
+  "scripts": {
+    "sassy": "node-sass scss/main.scss css/main.css -w"
+  },
+  "keywords": [
+    "Web3",
+    "Studio",
+    "Blockchain",
+    "and",
+    "Web3",
+    "Consultants"
+  ],
+  "author": "George Okanga",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap-icons": "^1.8.1",
+    "bulma": "^0.9.3",
+    "live-server": "^1.2.2"
+  }
+}
