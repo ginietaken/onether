@@ -481,7 +481,7 @@ h5 {
     font-size: 2.2rem;
     line-height: 1.4; }
   #header {
-    min-height: 100vh; }
+    height: auto; }
     #header #nav {
       width: 100%; }
       #header #nav .container-80 {
@@ -631,12 +631,12 @@ h5 {
         font-size: 1.4rem;
         font-weight: 500; }
   .our-services {
-    margin-bottom: 6rem;
-    margin-top: -55rem; }
+    margin-bottom: 6rem; }
     .our-services .is-one-fifth {
       display: none !important; }
     .our-services .service-items {
-      padding: 0 !important; }
+      padding: 0 !important;
+      margin-top: 0 !important; }
       .our-services .service-items .service-item h4 {
         font-size: 2rem !important;
         font-weight: 500; }
