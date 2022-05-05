@@ -53,6 +53,7 @@ $font-body: "Karla", sans-serif;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -100,6 +101,7 @@ h6 {
 h1 {
   font-size: 8rem;
   font-weight: 800;
+  line-height: 1;
 }
 
 h2 {
@@ -132,7 +134,7 @@ h5 {
 }
 
 #header {
-  height: 100vh;
+  max-height: 100vh;
 
   #nav {
     background-color: $base-bg-color-mid;
@@ -184,6 +186,10 @@ h5 {
               color: $text-color;
               transition: all 0.15s ease;
             }
+          }
+
+          .active {
+            color: $text-color;
           }
         }
 
@@ -295,6 +301,7 @@ h5 {
         h2 {
           font-size: 2.4rem;
           font-weight: 400;
+          margin-top: 3rem;
         }
 
         a {
@@ -307,7 +314,7 @@ h5 {
 
       .hero-arc {
         position: absolute;
-        bottom: -2rem;
+        bottom: -1rem;
         left: 50%;
         transform: translate(-50%);
 
@@ -445,7 +452,7 @@ h5 {
           width: 20rem;
           height: 20rem;
           background: $base-bg-color-lt;
-          border: 1px dashed $line-color;
+          border: 1px solid $line-color;
           border-radius: 8px;
 
           display: flex;
@@ -586,14 +593,86 @@ h5 {
         }
       }
     }
+  }
+}
 
-    .bottom-arc {
-      display: flex;
-      justify-content: center;
+// OTHER PAGES
 
-      margin-top: 6rem;
-      margin-bottom: 0 !important;
+#header {
+  .banner {
+    width: 100%;
+    height: 50rem;
+    background: url("../img/arc-r.svg") no-repeat;
+    background-position: 50%;
+    background-size: 15rem;
+    background-color: $base-bg-color-lt;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// SERVICES
+
+.our-services {
+  padding-top: 8rem;
+
+  .sidebar {
+    width: 25rem;
+
+    .sticky-menu {
+      li {
+        padding: 1rem 0;
+        a {
+          color: $text-color;
+          font-size: 1.8rem;
+          text-transform: capitalize;
+
+          &:hover {
+            color: $white;
+          }
+
+          &:active,
+          &:focus {
+            color: $white;
+            text-decoration: underline;
+          }
+        }
+      }
     }
+  }
+
+  .sticky-panel {
+    position: fixed;
+    top: 2rem;
+  }
+
+  .service-items {
+    padding: 0 4rem;
+
+    .service-item {
+      margin-bottom: 4rem;
+      .item-title {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+      }
+
+      .item-content {
+        margin-top: 1.5rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.services-cta {
+  margin-top: 12rem;
+  background: url("../img/services-cta-img.svg") no-repeat;
+  background-position: 26%;
+
+  a {
+    @include button-primary();
+    margin-top: 2rem;
+    color: $yellow;
   }
 }
 
@@ -643,6 +722,12 @@ h5 {
       .nav-brand {
         height: 3.2rem !important;
       }
+    }
+
+    .banner {
+      height: 30rem !important;
+      background-position: 80%;
+      background-size: 10rem;
     }
   }
   .nav-list {
@@ -877,6 +962,45 @@ h5 {
           font-weight: 500;
         }
       }
+    }
+  }
+
+  // SERVICES PAGE
+  .our-services {
+    margin-bottom: 6rem;
+    margin-top: -55rem;
+
+    .is-one-fifth {
+      display: none !important;
+    }
+
+    .service-items {
+      padding: 0 !important;
+
+      .service-item {
+        h4 {
+          font-size: 2rem !important;
+          font-weight: 500;
+        }
+
+        .item-content {
+          margin-top: 0.5rem !important;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .services-cta {
+    background-position: 5%;
+    background-size: 9rem;
+
+    a {
+      @include button-primary();
+      margin-top: 2rem;
+      color: $yellow;
     }
   }
 }
