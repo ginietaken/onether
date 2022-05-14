@@ -32,6 +32,4 @@ window.onscroll = function (e) {
   } else {
     sidebars[0].classList.remove("sticky-panel");
   }
-
-  //console.log(window.pageYOffset || (document.documentElement || document.body.parentNode ||document.body).scrollTop);
 };

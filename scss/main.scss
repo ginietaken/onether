@@ -175,9 +175,6 @@ h5 {
             text-decoration: none;
             font-size: 1.6rem;
             display: inline-block;
-            // Undo comment
-            // transform: scale(0);
-            // transition: transform 0.25s;
             color: $white;
             font-weight: 500;
             letter-spacing: -0.5px;
@@ -186,6 +183,10 @@ h5 {
               color: $text-color;
               transition: all 0.15s ease;
             }
+          }
+
+          abbr {
+            text-decoration: none;
           }
 
           .active {
@@ -198,6 +199,7 @@ h5 {
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          font-weight: 600 !important;
         }
       }
 
@@ -246,7 +248,6 @@ h5 {
         color: $white;
         -webkit-tap-highlight-color: transparent;
 
-        // Remove display:none
         display: none;
 
         .toggle {
@@ -269,6 +270,8 @@ h5 {
       }
     }
   }
+
+  // HOMEPAGE START
 
   #hero {
     height: calc(100vh - 12rem);
@@ -435,25 +438,20 @@ h5 {
 
     .partners-clients {
       margin-top: 20rem;
-    }
 
-    .clients {
-      margin-top: -5rem !important;
-      .top,
-      .middle,
-      .bottom {
+      .clients {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template: repeat(6, 1fr) / repeat(6, 1fr);
         gap: 2rem;
-        grid-auto-rows: minmax(100px, auto);
-        margin-top: 2rem;
 
-        .single {
-          width: 20rem;
-          height: 20rem;
+        .single-client {
+          width: 100%;
+          height: 19rem;
           background: $base-bg-color-lt;
           border: 1px solid $line-color;
           border-radius: 8px;
+          text-align: center;
+          color: $white;
 
           display: flex;
           justify-content: center;
@@ -462,6 +460,7 @@ h5 {
 
           &:hover {
             background: $base-bg-color-mid;
+            color: $text-color;
           }
         }
       }
@@ -470,7 +469,7 @@ h5 {
     .looperloop {
       display: flex;
       justify-content: center;
-      margin-top: 10rem;
+      // margin-top: -50rem;
     }
 
     .testimonials {
@@ -596,14 +595,17 @@ h5 {
   }
 }
 
+// HOMEPAGE ENDS
+
 // OTHER PAGES
+// Banner styles
 
 #header {
   .banner {
     width: 100%;
     height: 50rem;
     background: url("../img/arc-r.svg") no-repeat;
-    background-position: 50%;
+    background-position: 60%;
     background-size: 15rem;
     background-color: $base-bg-color-lt;
     display: flex;
@@ -611,7 +613,7 @@ h5 {
   }
 }
 
-// SERVICES
+// SERVICES PAGE
 
 .our-services {
   padding-top: 8rem;
@@ -622,10 +624,16 @@ h5 {
     .sticky-menu {
       li {
         padding: 1rem 0;
+
+        &:first-child {
+          padding: 0;
+          padding-bottom: 1rem;
+        }
         a {
           color: $text-color;
           font-size: 1.8rem;
           text-transform: capitalize;
+          font-weight: 600;
 
           &:hover {
             color: $white;
@@ -673,6 +681,288 @@ h5 {
     @include button-primary();
     margin-top: 2rem;
     color: $yellow;
+  }
+}
+
+// ABOUT US
+
+.intro {
+  margin-top: 8rem;
+
+  .intro-p {
+    font-size: 1.8rem;
+    color: $white;
+  }
+
+  .join-us {
+    margin: 15rem 0;
+    text-align: center;
+
+    h2 {
+      font-size: 8rem;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 3rem;
+      @include button-primary();
+      color: $yellow;
+    }
+  }
+}
+
+.core-team {
+  .header {
+    p {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  .list-members {
+    background: $base-bg-color-lt;
+    width: 100%;
+    margin: 6rem auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .member {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .member-image {
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .member-image img {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+  }
+
+  .member-image:hover img {
+    transform: scale(1.1);
+  }
+
+  .member-info {
+    width: 50%;
+    text-align: center;
+  }
+
+  .member-info p {
+    margin: 20px 0;
+  }
+
+  /* style social link */
+
+  .social-link a {
+    color: inherit;
+  }
+  .social-link svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    line-height: 35px;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  .social-link svg:hover {
+    color: $light-purple;
+    transform: translateY(-5px);
+  }
+
+  .member-image::after {
+    content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 15px solid $base-bg-color-lt;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (min-width: 771px) {
+    .member:nth-child(4n + 3) .member-info,
+    .member:nth-child(4n + 4) .member-info {
+      order: 1;
+    }
+    .member:nth-child(4n + 3) .member-image,
+    .member:nth-child(4n + 4) .member-image {
+      order: 2;
+    }
+
+    .member:nth-child(4n + 3) .member-image::after,
+    .member:nth-child(4n + 4) .member-image::after {
+      left: 0;
+      right: auto;
+      transform: translateY(-50%) rotateZ(180deg);
+    }
+  }
+
+  /* Mobile Styles */
+  @media screen and (max-width: 770px) {
+    .list-members {
+      width: 100%;
+    }
+    .member {
+      flex-basis: 100%;
+      font-size: 14px;
+    }
+    .social-link svg {
+      width: 2rem;
+      height: 2rem;
+      line-height: 3rem;
+    }
+
+    .member:nth-child(even) .member-info {
+      order: 1;
+    }
+    .member:nth-child(even) .member-image {
+      order: 2;
+    }
+
+    .member:nth-child(even) .member-image::after {
+      left: 0;
+      right: auto;
+      transform: translateY(-50%) rotateZ(180deg);
+    }
+  }
+}
+
+// CONTACT PAGE
+
+.form-area {
+  margin-top: 8rem;
+  width: 100%;
+  height: 70rem;
+  border-top: 3px solid $yellow;
+
+  .contact-form {
+    background-color: $base-bg-color-lt;
+    padding: 4rem 8rem;
+    height: 100%;
+
+    h2 {
+      margin-bottom: 3rem;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .form {
+      width: 100%;
+
+      div {
+        margin-bottom: 4rem;
+
+        label {
+          display: block;
+          color: $white;
+          font-weight: 500;
+        }
+
+        input,
+        select {
+          width: 100%;
+
+          background: transparent;
+          box-shadow: none;
+          outline: none;
+          border: none;
+          padding: 1.5rem 0;
+          color: $white;
+          border-bottom: 1px solid $text-color;
+
+          &::placeholder {
+            font-family: inherit;
+            color: $text-color;
+          }
+        }
+
+        input[type="email"] {
+          &:active,
+          &:focus,
+          &:valid {
+            background: none;
+          }
+        }
+
+        select {
+          cursor: pointer;
+          background-color: $base-bg-color-lt;
+          width: 100%;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
+
+      button {
+        background: none;
+        border: none;
+        @include button-primary();
+        color: $light-purple;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .for-quote {
+    height: 100%;
+    background: url("../img/contact-quote-right.svg") no-repeat;
+    background-position: top right;
+
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    q {
+      font-size: 2.4rem;
+      color: $white;
+    }
+
+    .services-list {
+      margin-top: 5rem;
+      h5 {
+        color: $text-color;
+      }
+
+      ul {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          margin-right: 2rem;
+          padding: 0.5rem 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            color: $white;
+            text-transform: capitalize;
+
+            &:hover {
+              text-decoration: underline;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -848,21 +1138,19 @@ h5 {
       margin-top: 10rem !important;
 
       .clients {
-        margin-top: -3rem !important;
         overflow-x: scroll;
 
-        .single {
+        .single-client {
           width: 12rem !important;
           height: 12rem !important;
+          font-size: 1.2rem;
         }
       }
     }
 
     .looperloop {
-      display: none !important;
       display: flex;
       justify-content: center;
-      margin-top: 10rem !important;
     }
 
     .testimonials {
@@ -968,6 +1256,7 @@ h5 {
   // SERVICES PAGE
   .our-services {
     margin-bottom: 6rem;
+    margin-top: -2rem !important;
 
     .is-one-fifth {
       display: none !important;
@@ -1001,6 +1290,32 @@ h5 {
       @include button-primary();
       margin-top: 2rem;
       color: $yellow;
+    }
+  }
+
+  .intro {
+    margin-top: 5rem;
+
+    .intro-p {
+      font-size: 1.6rem;
+    }
+
+    .join-us {
+      margin: 6rem 0;
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .core-team {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 1rem !important;
+      font-size: 1.4rem !important;
     }
   }
 }
