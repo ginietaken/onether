@@ -1,0 +1,157 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+
+.our-services {
+    padding-top: 8rem;
+  
+    .sidebar {
+      width: 25rem;
+  
+      .sticky-menu {
+        li {
+          padding: 1rem 0;
+  
+          &:first-child {
+            padding: 0;
+            padding-bottom: 1rem;
+          }
+          a {
+            color: $text-color;
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            font-weight: 600;
+  
+            &:hover {
+              color: $white;
+            }
+  
+            &:active,
+            &:focus {
+              color: $white;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  
+    .sticky-panel {
+      position: fixed;
+      top: 2rem;
+    }
+  
+    .service-items {
+      padding: 0 4rem;
+  
+      .service-item {
+        margin-bottom: 4rem;
+        .item-title {
+          font-size: 1.8rem;
+          padding: 1rem 0;
+        }
+  
+        .item-content {
+          margin-top: 1.5rem;
+          font-size: 1.8rem;
+  
+          .item-answer {
+            margin-bottom: 2rem;
+  
+            .sub {
+                font-weight: 500;
+              color: $light-purple;
+            }
+          }
+  
+          ul {
+            list-style-type: disc;
+            margin-left: 3rem;
+            margin-top: 2rem;
+  
+            li {
+              padding: .5rem 0;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .services-cta {
+    margin-top: 12rem;
+    background: url("../img/services-cta-img.svg") no-repeat;
+    background-position: 26%;
+  
+    a {
+      @include button-primary();
+      margin-top: 1rem;
+      color: $yellow;
+
+      &:hover {
+          color: $yellow;
+      }
+    }
+  }
+
+
+
+  // MOBILE STYLES
+
+  @media only screen and (max-width: 978px) {
+    #main {
+        margin-top: -3rem;
+        .container-80 {
+            .our-services {
+
+                .service-item {
+                    margin-bottom: 2rem !important;
+                }
+            
+                .is-one-fifth {
+                  display: none !important;
+                }
+            
+                .service-items {
+                  padding: 0 !important;
+                  margin-top: 0 !important;
+            
+                  .service-item {
+                    h4 {
+                      font-size: 1.8rem !important;
+                    }
+            
+                    .item-content {
+                      margin-top: 0.5rem !important;
+
+                      .item-answer {
+                          font-size: 1.6rem !important;
+
+                        }
+                        ul {
+                          li {
+                              font-size: 1.6rem !important;
+                          }
+                        }
+                    }
+                  }
+                }
+              }
+            
+              .services-cta {
+                background-position: 5%;
+                background-size: 9rem;
+            
+                a {
+                  @include button-primary();
+                  margin-top: 2rem;
+                  color: $yellow;
+                }
+              }
+        }
+    }
+}
+
+
+

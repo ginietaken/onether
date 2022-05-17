@@ -41,11 +41,8 @@
                 <a href="about.html" class="nav-link">About Us</a>
               </li>
               <li class="nav-item">
-                <a href="javascript:void(0)" class="nav-link"
-                  ><abbr title="Crafting this page. Please check back soon"
-                    >Portfolio</abbr
-                  ></a
-                >
+                <a href="portfolio.html" class="nav-link"
+                  >Portfolio</a>
               </li>
               <li class="nav-item">
                 <a href="contact.html" class="nav-link contact-us-item"
@@ -136,72 +133,48 @@
         <div class="form-area columns">
           <div class="column contact-form">
             <h2>Get a free quote</h2>
-            <div class="form">
-              <form
-                action=""
-                name="contact-form"
-                method="post"
-                id="contact-form"
-              >
-                <div class="sender-name">
-                  <label for="name">Name:</label>
-                  <input
-                    type="text"
-                    name="userName"
-                    id="userName"
-                    placeholder="What's your name?"
-                    class="InputBox"
-                    required
-                  />
-                </div>
 
-                <div class="sender-email">
-                  <label for="email">Email:</label>
-                  <input
-                    type="email"
-                    name="userEmail"
-                    id="userEmail"
-                    placeholder="Enable us to reach right back"
-                    required
-                  />
-                </div>
-
-                <div class="sender-selected-service">
-                  <label for="service">Choose service:</label>
-                  <select name="userService" id="userService">
-                    <option value="">Please choose a service</option>
-                    <option value="Consulting">Consulting</option>
-                    <option value="Research & Development">
+            <form id="contact-form" method="post" action="https://submit-form.com/hkZm8aaV" role="form">
+  
+              <div class="form-group">
+                  <label for="form_name">Name *</label>
+                  <input type="text" name="name" class="form-control" placeholder="What do we call you?" required="required">
+              </div>
+              <div class="form-group">
+                  <label for="form_email">Email *</label>
+                  <input type="email" name="email" placeholder="Please enter your email" required="required">
+              </div>
+              <div class="form-group">
+                  <label for="form_need">Please specify your need *</label>
+                  <select name="need" required="required">
+                      <option value=""></option>
+                      <option value="Consulting">Consulting</option>
+                      <option value="Research & Development">
                       Research & Development
-                    </option>
-                    <option value="Outsourcing">Outsourcing</option>
-                    <option value="Fundraising">Fundraising</option>
-                    <option value="Outsourcing">Outsourcing</option>
-                    <option value="Auditing">Auditing</option>
-                    <option value="Compliance">Compliance</option>
-                    <option value="Analytics & Forensics">
+                      </option>
+                      <option value="Outsourcing">Outsourcing</option>
+                      <option value="Fundraising">Fundraising</option>
+                      <option value="Outsourcing">Outsourcing</option>
+                      <option value="Auditing">Auditing</option>
+                      <option value="Compliance">Compliance</option>
+                      <option value="Analytics & Forensics">
                       Analytics & Forensics
-                    </option>
-                    <option value="Communications">Communications</option>
-                    <option value="Corp. Affairs">Corp. Affairs</option>
+                      </option>
+                      <option value="Communications">Communications</option>
+                      <option value="Corp. Affairs">Corporate
+                        Affairs</option>
+                      <option value="Other">Something else?</option>
                   </select>
+              </div>
+                  
+                  <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea name="message" placeholder="How may we collaborate?" rows="2" required="required"></textarea>
                 </div>
-                <div class="main-message">
-                  <label for="main-message"
-                    >Please provide more information</label
-                  >
-                  <input
-                    type="text"
-                    name="userMessage"
-                    id="userMessage"
-                    placeholder="How can we collaborate?"
-                    required
-                  />
-                </div>
-                <button type="submit" name="submit">Send message</button>
-              </form>
-            </div>
+                <input type="submit"  value="Send message">
+          </form>        
           </div>
+
           <div class="column for-quote">
             <q
               >The team at Onether.Digital are a great resource for engineering
@@ -233,17 +206,17 @@
         <div class="bottom-cta">
           <p>
             Ready to get started on your project?
-            <a href="javascript:void()">Contact us</a>
+            <a href="contact.html">Contact us</a>
           </p>
         </div>
 
         <div class="main-footer">
           <div class="left contacts">
             <ul class="links">
-              <li><a href="javascript:void()">LinkedIn</a></li>
-              <li><a href="javascript:void()">Twitter</a></li>
-              <li><a href="javascript:void()">Telegram</a></li>
-              <li><a href="javascript:void()">Email</a></li>
+              <li><a href="https://www.linkedin.com/company/onether-digital/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://twitter.com/onetherdigital" target="_blank">Twitter</a></li>
+              <li><a href="https://t.me/+n6QUnpOxjm5hM2Fk" target="_blank">Telegram</a></li>
+              <li><a href="mailto:info@onether.digital">Email</a></li>
             </ul>
           </div>
           <div class="right copy">
@@ -255,7 +228,6 @@
         <!--Bottom - for every page ends -->
       </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,54 +1,7 @@
-// Font Import
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;700;800&display=swap");
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/header';
 
-// VARIABLES
-
-/* Colors */
-$base-bg-color-dark: #1a1b1e;
-$base-bg-color-mid: #282b31;
-$base-bg-color-lt: #2a2d33;
-$line-color: #2e3138;
-$text-color: #7878a3;
-$white: #ffffff;
-$black: #000000;
-
-/* Brand */
-$mid-purple: #ba6bf8;
-$light-purple: #f797ff;
-$yellow: #fdf19b;
-$green: #00ffd1;
-
-$linear: linear-gradient(180deg, #00ffd1 0%, #ba6bf8 50.52%, #f797ff 100%);
-
-$font-body: "Karla", sans-serif;
-
-@mixin button-primary {
-  display: inline-block;
-  text-decoration: none;
-  padding: 1.7rem 5rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  transition: all 350ms ease;
-  border-radius: 8px;
-
-  background: radial-gradient(
-    165.31% 161% at -63.75% -54%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 95.31%
-  );
-  box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(42px);
-
-  &:hover {
-    transform: translateY(-5px);
-    background: radial-gradient(
-      165.31% 161% at -63.75% -54%,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.07) 95.31%
-    );
-  }
-}
 
 html {
   font-size: 62.5%;
@@ -75,7 +28,7 @@ body {
     $base-bg-color-mid calc(100% - 0.5px),
     $line-color 0
   );
-  background-size: calc((100% - 5 * 0.5px) / 7 + 0.5px) 100%;
+  background-size: calc((100% - 5 * 0.5px) / 10 + 0.5px) 100%;
 }
 
 body::-webkit-scrollbar {
@@ -105,9 +58,8 @@ h1 {
 }
 
 h2 {
-  font-size: 4.4rem;
+  font-size: 4rem;
   margin-top: 1.5rem;
-  font-size: 4.2rem;
   line-height: 1.1;
   font-weight: 700;
 }
@@ -139,16 +91,16 @@ h5 {
   #nav {
     background-color: $base-bg-color-mid;
     width: 100%;
+    
 
     .container-80 {
-      height: 12rem;
-      width: 100%;
+      height: 10rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       .nav-brand {
-        height: 3.8rem;
+        height: 3.4rem;
         width: auto;
         -webkit-tap-highlight-color: transparent;
         img {
@@ -169,11 +121,11 @@ h5 {
         }
 
         .nav-item {
-          padding: 0 2rem;
+          padding: 0 1.5rem;
 
           .nav-link {
             text-decoration: none;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             display: inline-block;
             color: $white;
             font-weight: 500;
@@ -185,12 +137,8 @@ h5 {
             }
           }
 
-          abbr {
-            text-decoration: none;
-          }
-
           .active {
-            color: $text-color;
+            text-decoration: underline;
           }
         }
 
@@ -199,7 +147,6 @@ h5 {
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-weight: 600 !important;
         }
       }
 
@@ -274,7 +221,7 @@ h5 {
   // HOMEPAGE START
 
   #hero {
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 10rem);
 
     .container-80 {
       position: relative;
@@ -289,28 +236,23 @@ h5 {
         background-repeat: no-repeat;
         background-size: auto;
         height: auto;
-        margin-top: -25rem;
+        margin-top: -20rem;
         text-align: center;
-
-        h1,
-        h2 {
-          text-transform: uppercase;
-        }
 
         h1 span {
           color: $green;
         }
 
         h2 {
-          font-size: 2.4rem;
+          font-size: 2.2rem;
           font-weight: 400;
-          margin-top: 3rem;
+          margin-top: 2rem;
         }
 
         a {
           @include button-primary();
 
-          margin-top: 5rem;
+          margin-top: 3rem;
           color: $yellow;
         }
       }
@@ -321,7 +263,7 @@ h5 {
         left: 50%;
         transform: translate(-50%);
 
-        width: 50rem;
+        width: 40rem;
         height: auto;
 
         img {
@@ -339,22 +281,22 @@ h5 {
     .services-wo {
       .service-items {
         .item {
-          margin-bottom: 6rem;
+          margin-bottom: 8rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
 
           .img {
-            width: 90rem;
+            width: 120rem;
             height: auto;
 
-            svg {
+            img {
               width: 100%;
             }
           }
 
           .content {
-            margin-left: 8rem;
+            margin-left: 6rem;
 
             h4 {
               font-size: 2rem;
@@ -364,7 +306,7 @@ h5 {
 
             p {
               font-size: 1.6rem;
-              margin-top: 3rem;
+              margin-top: 2rem;
             }
           }
         }
@@ -377,7 +319,7 @@ h5 {
           }
 
           .img {
-            margin-left: 8rem;
+            margin-left: 6rem;
           }
         }
 
@@ -446,11 +388,13 @@ h5 {
 
         .single-client {
           width: 100%;
-          height: 19rem;
+          height: 17rem;
           background: $base-bg-color-lt;
           border: 1px solid $line-color;
           border-radius: 8px;
           text-align: center;
+          // font-size: 1.4rem;
+          padding: 2rem;
           color: $white;
 
           display: flex;
@@ -469,7 +413,7 @@ h5 {
     .looperloop {
       display: flex;
       justify-content: center;
-      // margin-top: -50rem;
+      margin-top: -45rem;
     }
 
     .testimonials {
@@ -483,14 +427,13 @@ h5 {
 
       .word {
         font-size: 1.8rem;
-        line-height: 2;
         color: $white;
       }
 
       .profile {
         display: flex;
         align-items: center;
-        margin-top: 4rem;
+        margin-top: 2rem;
 
         img {
           display: block;
@@ -502,14 +445,14 @@ h5 {
           margin-left: 2rem;
 
           .p-name {
-            font-size: 2.4rem;
+            font-size: 2rem;
             color: $white;
             font-weight: 500;
           }
 
           .pos {
             text-transform: uppercase;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-top: 0.5rem;
             font-weight: 500;
           }
@@ -521,12 +464,12 @@ h5 {
       background: linear-gradient(
         180deg,
         #2f3238 0%,
-        rgba(40, 43, 49, 0.6) 52.6%,
+        rgba(40, 43, 49, 0.2) 52.6%,
         #2a2d33 100%
       );
       border-radius: 0.8rem;
 
-      margin-top: 12rem;
+      margin-top: 8rem;
       padding: 5rem;
 
       p {
@@ -613,243 +556,18 @@ h5 {
   }
 }
 
-// SERVICES PAGE
-
-.our-services {
-  padding-top: 8rem;
-
-  .sidebar {
-    width: 25rem;
-
-    .sticky-menu {
-      li {
-        padding: 1rem 0;
-
-        &:first-child {
-          padding: 0;
-          padding-bottom: 1rem;
-        }
-        a {
-          color: $text-color;
-          font-size: 1.8rem;
-          text-transform: capitalize;
-          font-weight: 600;
-
-          &:hover {
-            color: $white;
-          }
-
-          &:active,
-          &:focus {
-            color: $white;
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-
-  .sticky-panel {
-    position: fixed;
-    top: 2rem;
-  }
-
-  .service-items {
-    padding: 0 4rem;
-
-    .service-item {
-      margin-bottom: 4rem;
-      .item-title {
-        font-size: 1.8rem;
-        padding: 1rem 0;
-      }
-
-      .item-content {
-        margin-top: 1.5rem;
-        font-size: 1.8rem;
-      }
-    }
-  }
-}
-
-.services-cta {
-  margin-top: 12rem;
-  background: url("../img/services-cta-img.svg") no-repeat;
-  background-position: 26%;
-
-  a {
-    @include button-primary();
-    margin-top: 2rem;
-    color: $yellow;
-  }
-}
-
-// ABOUT US
-
-.intro {
-  margin-top: 8rem;
-
-  .intro-p {
-    font-size: 1.8rem;
-    color: $white;
-  }
-
-  .join-us {
-    margin: 15rem 0;
-    text-align: center;
-
-    h2 {
-      font-size: 8rem;
-    }
-
-    a {
-      display: inline-block;
-      margin-top: 3rem;
-      @include button-primary();
-      color: $yellow;
-    }
-  }
-}
-
-.core-team {
-  .header {
-    p {
-      margin-top: 2rem;
-      font-size: 1.8rem;
-    }
-  }
-
-  .list-members {
-    background: $base-bg-color-lt;
-    width: 100%;
-    margin: 6rem auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .member {
-    flex-basis: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .member-image {
-    width: 50%;
-    height: 100%;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .member-image img {
-    width: 100%;
-    height: 100%;
-    transition: 1s;
-  }
-
-  .member-image:hover img {
-    transform: scale(1.1);
-  }
-
-  .member-info {
-    width: 50%;
-    text-align: center;
-  }
-
-  .member-info p {
-    margin: 20px 0;
-  }
-
-  /* style social link */
-
-  .social-link a {
-    color: inherit;
-  }
-  .social-link svg {
-    width: 2.4rem;
-    height: 2.4rem;
-    line-height: 35px;
-    margin: 0 7px;
-    cursor: pointer;
-    transition: transform 0.5s;
-  }
-
-  .social-link svg:hover {
-    color: $light-purple;
-    transform: translateY(-5px);
-  }
-
-  .member-image::after {
-    content: "";
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 15px solid $base-bg-color-lt;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
-  @media screen and (min-width: 771px) {
-    .member:nth-child(4n + 3) .member-info,
-    .member:nth-child(4n + 4) .member-info {
-      order: 1;
-    }
-    .member:nth-child(4n + 3) .member-image,
-    .member:nth-child(4n + 4) .member-image {
-      order: 2;
-    }
-
-    .member:nth-child(4n + 3) .member-image::after,
-    .member:nth-child(4n + 4) .member-image::after {
-      left: 0;
-      right: auto;
-      transform: translateY(-50%) rotateZ(180deg);
-    }
-  }
-
-  /* Mobile Styles */
-  @media screen and (max-width: 770px) {
-    .list-members {
-      width: 100%;
-    }
-    .member {
-      flex-basis: 100%;
-      font-size: 14px;
-    }
-    .social-link svg {
-      width: 2rem;
-      height: 2rem;
-      line-height: 3rem;
-    }
-
-    .member:nth-child(even) .member-info {
-      order: 1;
-    }
-    .member:nth-child(even) .member-image {
-      order: 2;
-    }
-
-    .member:nth-child(even) .member-image::after {
-      left: 0;
-      right: auto;
-      transform: translateY(-50%) rotateZ(180deg);
-    }
-  }
-}
 
 // CONTACT PAGE
 
 .form-area {
   margin-top: 8rem;
   width: 100%;
-  height: 70rem;
+  height: auto;
   border-top: 3px solid $yellow;
 
   .contact-form {
     background-color: $base-bg-color-lt;
-    padding: 4rem 8rem;
+    padding: 4rem ;
     height: 100%;
 
     h2 {
@@ -858,11 +576,11 @@ h5 {
       font-weight: 800;
     }
 
-    .form {
+    form {
       width: 100%;
 
-      div {
-        margin-bottom: 4rem;
+      .form-group {
+        margin-bottom: 3rem;
 
         label {
           display: block;
@@ -871,7 +589,8 @@ h5 {
         }
 
         input,
-        select {
+        select,
+        textarea {
           width: 100%;
 
           background: transparent;
@@ -881,10 +600,12 @@ h5 {
           padding: 1.5rem 0;
           color: $white;
           border-bottom: 1px solid $text-color;
+          font-size: inherit;
 
           &::placeholder {
             font-family: inherit;
             color: $text-color;
+            font-size: 1.4rem;
           }
         }
 
@@ -906,12 +627,11 @@ h5 {
         }
       }
 
-      button {
+      input[type="submit"] {
         background: none;
         border: none;
         @include button-primary();
         color: $light-purple;
-        font-weight: 500;
         cursor: pointer;
       }
     }
@@ -920,7 +640,7 @@ h5 {
   .for-quote {
     height: 100%;
     background: url("../img/contact-quote-right.svg") no-repeat;
-    background-position: top right;
+    background-position: 90% 5%;
 
     padding: 0 4rem;
     display: flex;
@@ -928,6 +648,7 @@ h5 {
     justify-content: center;
 
     q {
+      margin-top: 15rem;
       font-size: 2.4rem;
       color: $white;
     }
@@ -1139,6 +860,7 @@ h5 {
 
       .clients {
         overflow-x: scroll;
+        scrollbar-width: 0px !important;
 
         .single-client {
           width: 12rem !important;
@@ -1151,6 +873,7 @@ h5 {
     .looperloop {
       display: flex;
       justify-content: center;
+      margin-top: -30rem !important;
     }
 
     .testimonials {
@@ -1253,69 +976,64 @@ h5 {
     }
   }
 
-  // SERVICES PAGE
-  .our-services {
-    margin-bottom: 6rem;
-    margin-top: -2rem !important;
+  // CONTACT HERE 
 
-    .is-one-fifth {
-      display: none !important;
+  .form-area {
+    margin-top: 4rem !important;
+  }
+
+  .contact-form {
+    padding: 4rem 2rem !important;
+
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  .for-quote {
+    height: 100%;
+    background: url("../img/contact-quote-right.svg") no-repeat;
+    background-position: 90% 5%;
+    background-size: 5rem !important;
+
+    padding: 2rem !important;
+
+    q {
+      margin-top: 2rem !important;
+      font-size: 1.6rem !important;
+      color: $white;
     }
 
-    .service-items {
-      padding: 0 !important;
-      margin-top: 0 !important;
+    .services-list {
+      margin-top: 5rem;
+      h5 {
+        color: $text-color;
+      }
 
-      .service-item {
-        h4 {
-          font-size: 2rem !important;
-          font-weight: 500;
-        }
+      ul {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
 
-        .item-content {
-          margin-top: 0.5rem !important;
-        }
-        p {
-          font-size: 1.4rem;
+        li {
+          margin-right: 2rem;
+          padding: 0.5rem 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            color: $white;
+            text-transform: capitalize;
+
+            &:hover {
+              text-decoration: underline;
+              color: $text-color;
+            }
+          }
         }
       }
-    }
-  }
-
-  .services-cta {
-    background-position: 5%;
-    background-size: 9rem;
-
-    a {
-      @include button-primary();
-      margin-top: 2rem;
-      color: $yellow;
-    }
-  }
-
-  .intro {
-    margin-top: 5rem;
-
-    .intro-p {
-      font-size: 1.6rem;
-    }
-
-    .join-us {
-      margin: 6rem 0;
-      h2 {
-        font-size: 4rem;
-      }
-    }
-  }
-
-  .core-team {
-    h2 {
-      font-size: 2rem;
-    }
-
-    p {
-      margin-top: 1rem !important;
-      font-size: 1.4rem !important;
     }
   }
 }

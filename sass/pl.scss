@@ -1,0 +1,142 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+#main {
+    .container-80 {
+
+        .intro {
+            margin-top: 8rem;
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+        .partnerships {
+
+            margin-top: 8rem;
+            margin-bottom: -55rem;
+          
+                .cases {
+                  margin-top: 4rem;
+                  display: grid;
+                  grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+                  gap: 2rem;
+          
+                  .case {
+                    position: relative;
+                    width: 100%;
+                    height: 17rem;
+                    background: $base-bg-color-lt;
+                    border: 1px solid $line-color;
+                    border-radius: 8px;
+                    text-align: center;
+                    padding: 2rem;
+                    color: $white;
+          
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+          
+                  
+                    .inner {
+                      text-align: center;
+                  
+                      .overlay {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: $base-bg-color-mid;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 0;
+                        transition: .3s ease;
+                        font-size: 1.4rem;
+                  
+                        .text {
+                          color: white;
+                          font-size: inherit;
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          -webkit-transform: translate(-50%, -50%);
+                          -ms-transform: translate(-50%, -50%);
+                          transform: translate(-50%, -50%);
+                          text-align: center;
+                        }
+          
+                        .link-to {
+                          position: absolute;
+                          bottom: 1rem;
+                          right: 2rem;
+          
+                          &::after {
+                            content: url(../img/ArrowRight.svg);
+                            transition: all 250ms ease;
+                          }
+                
+                          &:hover {
+                            &::after {
+                              margin-right: -.3rem;
+                            }
+                          }
+          
+                          
+                        }
+                      }
+                    }
+                  
+                    &:hover .overlay {
+                      height: 100%;
+                    }
+                  }
+                }
+          
+          
+            
+        }
+    }
+}
+
+
+  // MOBILE STYLES
+
+  @media only screen and (max-width: 978px) {
+    #main {
+        margin-top: -3rem;
+        .container-80 {
+
+            .intro {
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+            
+            .partnerships {
+                margin-top: 4rem !important;
+                margin-bottom: -35rem !important;
+          
+                .cases {
+                  overflow-x: scroll;
+                  scrollbar-width: 0px !important;
+          
+                  .case {
+                    width: 12rem !important;
+                    height: 12rem !important;
+                    font-size: 1.2rem;
+
+                    .inner {
+
+                        .overlay {
+                            font-size: 1rem !important;
+                        }
+                    }
+                  }
+                }
+              }
+        }
+    }
+}

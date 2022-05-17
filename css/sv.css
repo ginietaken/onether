@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;700;800&display=swap");
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
+/* Brand */
+.our-services {
+  padding-top: 8rem; }
+  .our-services .sidebar {
+    width: 25rem; }
+    .our-services .sidebar .sticky-menu li {
+      padding: 1rem 0; }
+      .our-services .sidebar .sticky-menu li:first-child {
+        padding: 0;
+        padding-bottom: 1rem; }
+      .our-services .sidebar .sticky-menu li a {
+        color: #7878a3;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 600; }
+        .our-services .sidebar .sticky-menu li a:hover {
+          color: #ffffff; }
+        .our-services .sidebar .sticky-menu li a:active, .our-services .sidebar .sticky-menu li a:focus {
+          color: #ffffff;
+          text-decoration: underline; }
+  .our-services .sticky-panel {
+    position: fixed;
+    top: 2rem; }
+  .our-services .service-items {
+    padding: 0 4rem; }
+    .our-services .service-items .service-item {
+      margin-bottom: 4rem; }
+      .our-services .service-items .service-item .item-title {
+        font-size: 1.8rem;
+        padding: 1rem 0; }
+      .our-services .service-items .service-item .item-content {
+        margin-top: 1.5rem;
+        font-size: 1.8rem; }
+        .our-services .service-items .service-item .item-content .item-answer {
+          margin-bottom: 2rem; }
+          .our-services .service-items .service-item .item-content .item-answer .sub {
+            font-weight: 500;
+            color: #f797ff; }
+        .our-services .service-items .service-item .item-content ul {
+          list-style-type: disc;
+          margin-left: 3rem;
+          margin-top: 2rem; }
+          .our-services .service-items .service-item .item-content ul li {
+            padding: .5rem 0;
+            color: #ffffff; }
+
+.services-cta {
+  margin-top: 12rem;
+  background: url("../img/services-cta-img.svg") no-repeat;
+  background-position: 26%; }
+  .services-cta a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.7rem 3rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    transition: all 350ms ease;
+    border-radius: 8px;
+    background: radial-gradient(165.31% 161% at -63.75% -54%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 95.31%);
+    box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(42px);
+    margin-top: 1rem;
+    color: #fdf19b; }
+    .services-cta a:hover {
+      transform: translateY(-5px);
+      background: radial-gradient(165.31% 161% at -63.75% -54%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.07) 95.31%); }
+    .services-cta a:hover {
+      color: #fdf19b; }
+
+@media only screen and (max-width: 978px) {
+  #main {
+    margin-top: -3rem; }
+    #main .container-80 .our-services .service-item {
+      margin-bottom: 2rem !important; }
+    #main .container-80 .our-services .is-one-fifth {
+      display: none !important; }
+    #main .container-80 .our-services .service-items {
+      padding: 0 !important;
+      margin-top: 0 !important; }
+      #main .container-80 .our-services .service-items .service-item h4 {
+        font-size: 1.8rem !important; }
+      #main .container-80 .our-services .service-items .service-item .item-content {
+        margin-top: 0.5rem !important; }
+        #main .container-80 .our-services .service-items .service-item .item-content .item-answer {
+          font-size: 1.6rem !important; }
+        #main .container-80 .our-services .service-items .service-item .item-content ul li {
+          font-size: 1.6rem !important; }
+    #main .container-80 .services-cta {
+      background-position: 5%;
+      background-size: 9rem; }
+      #main .container-80 .services-cta a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1.7rem 3rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        transition: all 350ms ease;
+        border-radius: 8px;
+        background: radial-gradient(165.31% 161% at -63.75% -54%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 95.31%);
+        box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(42px);
+        margin-top: 2rem;
+        color: #fdf19b; }
+        #main .container-80 .services-cta a:hover {
+          transform: translateY(-5px);
+          background: radial-gradient(165.31% 161% at -63.75% -54%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.07) 95.31%); } }
