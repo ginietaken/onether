@@ -420,20 +420,29 @@ h5 {
       margin-top: 10rem;
       display: flex;
       justify-content: space-between;
+      justify-content: center;
 
       .single {
-        width: 45%;
+        // width: 45%;
+        width: 70%;
       }
 
       .word {
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
+        font-size: 2.4rem;
         color: $white;
+
+        // Remove this
+        text-align: center;
       }
 
       .profile {
         display: flex;
         align-items: center;
         margin-top: 2rem;
+
+        // Remove later 
+        justify-content: center;
 
         img {
           display: block;
